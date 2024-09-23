@@ -46,6 +46,12 @@ header h1 {
     top: 10px;
     right: 20px;
 }
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: fügt abgerundete Ecken hinzu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: fügt einen Schatten hinzu */
+}
 
 .menu {
     display: none;
