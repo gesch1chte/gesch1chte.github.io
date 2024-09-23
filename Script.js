@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.body.classList.add('page-transition', 'active');
-
     function transitionToPage(url) {
         document.body.classList.remove('active'); 
         setTimeout(() => {
@@ -9,16 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('hamburger').addEventListener('click', function() {
-        const menu = document.querySelector('.menu'); 
+        const menu = document.getElementById('menu');
         if (menu) {
-            menu.classList.toggle('active'); 
+            menu.classList.toggle('active');
         }
     });
 
     document.querySelectorAll('.menu-options button').forEach(button => {
         button.addEventListener('click', function() {
             const page = this.getAttribute('data-page');
-            transitionToPage(`${page}.html`); 
+            transitionToPage(`${page}.html`);
         });
     });
 });
