@@ -9,14 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('hamburger').addEventListener('click', function() {
-        const menu = document.querySelector('☰ Menü'); // Hier anpassen, wenn nötig
-        menu.classList.toggle('active');
+        const menu = document.querySelector('.menu'); 
+        if (menu) {
+            menu.classList.toggle('active'); 
+        }
     });
 
     document.querySelectorAll('.menu-options button').forEach(button => {
         button.addEventListener('click', function() {
             const page = this.getAttribute('data-page');
-            transitionToPage(`${page}.html`); // Korrekte Template Literal-Syntax
+            transitionToPage(`${page}.html`); 
         });
     });
 });
